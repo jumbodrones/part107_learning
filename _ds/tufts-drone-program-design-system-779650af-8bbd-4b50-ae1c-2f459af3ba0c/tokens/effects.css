@@ -1,0 +1,29 @@
+/* Radius, borders, shadows, motion */
+:root {
+  /* Corner radii — Tufts leans clean & academic: modest rounding */
+  --radius-none: 0;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* Border widths */
+  --border-hairline: 1px; /* @kind other */
+  --border-thick: 2px; /* @kind other */
+  --border-accent: 4px; /* @kind other */
+
+  /* Shadows — soft, warm-neutral, never heavy */
+  --shadow-xs: 0 1px 2px rgba(61, 46, 37, 0.06);
+  --shadow-sm: 0 1px 3px rgba(61, 46, 37, 0.08), 0 1px 2px rgba(61, 46, 37, 0.06);
+  --shadow-md: 0 4px 12px rgba(61, 46, 37, 0.10);
+  --shadow-lg: 0 12px 28px rgba(61, 46, 37, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(62, 142, 222, 0.4);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 320ms; /* @kind other */
+}

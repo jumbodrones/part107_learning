@@ -1,0 +1,42 @@
+/* Tufts typography scale */
+:root {
+  /* Families (see fonts.css for the substitution note) */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Weights */
+  --fw-light: 300; /* @kind other */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium: 500; /* @kind other */
+  --fw-semibold: 600; /* @kind other */
+  --fw-bold: 700; /* @kind other */
+  --fw-black: 800; /* @kind other */
+
+  /* Type scale (rem, 16px base) */
+  --fs-display: 4.5rem;   /* 72 — hero */
+  --fs-h1: 3rem;          /* 48 */
+  --fs-h2: 2.25rem;       /* 36 */
+  --fs-h3: 1.625rem;      /* 26 */
+  --fs-h4: 1.25rem;       /* 20 */
+  --fs-lg: 1.125rem;      /* 18 */
+  --fs-body: 1rem;        /* 16 */
+  --fs-sm: 0.875rem;      /* 14 */
+  --fs-xs: 0.75rem;       /* 12 */
+
+  /* Line heights */
+  --lh-tight: 1.1; /* @kind other */
+  --lh-snug: 1.25; /* @kind other */
+  --lh-normal: 1.5; /* @kind other */
+  --lh-relaxed: 1.7; /* @kind other */
+
+  /* Tracking */
+  --ls-tight: -0.02em; /* @kind other */
+  --ls-normal: 0; /* @kind other */
+  --ls-wide: 0.04em; /* @kind other */
+  --ls-caps: 0.12em; /* @kind other */
+
+  /* Semantic roles */
+  --text-eyebrow: var(--fw-semibold) var(--fs-xs)/1.3 var(--font-sans);
+}

@@ -1,0 +1,65 @@
+/* Tufts color system — sourced from brand.tufts.edu/guidelines/color */
+:root {
+  /* ---- Primary ---- */
+  --tufts-blue: #3E8EDE;      /* PMS 279 — the signature brand color */
+  --tufts-brown: #63493A;     /* PMS 7519 — primary secondary */
+
+  /* ---- Extended primary palette ---- */
+  --jumbo-blue: #002E6D;      /* PMS 294 — accessible dark blue, safe for body text */
+  --bessie-brown: #3D2E25;    /* PMS 440 — near-black brown */
+  --ballou-blue: #3F5EAB;     /* PMS 7455 */
+  --candle-white: #F2EDE7;    /* Warm Gray 1 @ 40% — warm paper surface */
+  --prez-lawn-green: #1A5532; /* PMS 357 */
+  --aurora-green: #98D5C7;    /* PMS 571 */
+  --flame-orange: #F37121;    /* PMS 1495 */
+  --beacon-yellow: #FFC72C;   /* PMS 123 */
+  --civic-purple: #8C4799;    /* PMS 258 */
+  --radiant-magenta: #AA0061; /* PMS 227 */
+
+  /* ---- Alert / emergency ---- */
+  --alert-red: #C0311A;
+  --alert-yellow: #FFD200;
+
+  /* ---- Neutrals (derived from Bessie Brown / warm gray family) ---- */
+  --white: #FFFFFF;
+  --gray-50: #FAF8F5;
+  --gray-100: #F2EDE7;   /* == candle white */
+  --gray-200: #E5DED4;
+  --gray-300: #D2C9BC;
+  --gray-400: #A99E8E;
+  --gray-500: #7C7264;
+  --gray-600: #574C40;
+  --gray-700: #3D2E25;   /* == bessie brown */
+  --black: #1A130E;
+
+  /* ---- Semantic aliases ---- */
+  --color-brand: var(--tufts-blue);
+  --color-brand-deep: var(--jumbo-blue);
+  --color-accent: var(--tufts-brown);
+
+  --text-strong: var(--jumbo-blue);      /* headings */
+  --text-body: var(--bessie-brown);      /* body copy — accessible on white */
+  --text-muted: var(--gray-500);
+  --text-inverse: var(--white);
+  --text-link: var(--jumbo-blue);
+  --text-link-hover: var(--tufts-blue);
+
+  --surface-page: var(--white);
+  --surface-warm: var(--candle-white);
+  --surface-card: var(--white);
+  --surface-brand: var(--tufts-blue);
+  --surface-brand-deep: var(--jumbo-blue);
+  --surface-sunken: var(--gray-50);
+
+  --border-subtle: var(--gray-200);
+  --border-default: var(--gray-300);
+  --border-strong: var(--gray-400);
+  --border-brand: var(--tufts-blue);
+
+  --focus-ring: var(--tufts-blue);
+
+  --success: var(--prez-lawn-green);
+  --warning: var(--beacon-yellow);
+  --danger: var(--alert-red);
+  --info: var(--tufts-blue);
+}
