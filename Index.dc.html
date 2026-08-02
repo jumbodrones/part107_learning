@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+body{margin:0}
+a.deck-card{text-decoration:none;color:inherit}
+a.deck-card:hover .deck-title{color:#3E8EDE}
+a.deck-card:hover{box-shadow:0 12px 28px rgba(61,46,37,0.14);transform:translateY(-2px)}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#F2EDE7;font-family:'Montserrat',sans-serif;color:#3D2E25">
+  <div style="background:#002E6D;padding:72px 64px 56px;color:#fff">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px">
+      <img src="./assets/anatomy/img01.png" alt="Jumbo" style="height:44px;width:auto">
+      <img src="./assets/anatomy/img02.png" alt="Tufts University" style="height:30px;width:auto">
+      <span style="font-weight:600;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#98D5C7;border-left:1px solid rgba(255,255,255,0.4);padding-left:14px">Drone Program</span>
+    </div>
+    <div style="font-weight:700;font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:#98D5C7;margin-bottom:14px">Tufts University Data Lab</div>
+    <h1 style="font-family:'Playfair Display',serif;font-weight:800;font-size:64px;line-height:1.05;letter-spacing:-0.02em;margin:0 0 12px">Drone Slides</h1>
+    <p style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.4;max-width:800px;color:rgba(255,255,255,0.9);margin:0">Select a deck below to view.</p>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;padding:56px 64px 96px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <sc-for list="{{ decks }}" as="deck" hint-placeholder-count="8">
+        <a class="deck-card" href="{{ deck.href }}" style="background:#fff;border-radius:16px;border-top:8px solid {{ deck.accent }};padding:32px;box-shadow:0 1px 3px rgba(61,46,37,0.08);transition:transform 0.15s,box-shadow 0.15s;display:flex;flex-direction:column;gap:10px">
+          <div style="font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:{{ deck.accent }}">{{ deck.kicker }}</div>
+          <div class="deck-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:28px;color:#002E6D;transition:color 0.15s">{{ deck.title }}</div>
+          <div style="font-family:'Source Serif 4',serif;font-size:18px;line-height:1.4;color:#63493A">{{ deck.desc }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DECKS = [
+  { href: './Airspace.dc.html', kicker: 'FAA Part 107', title: 'Airspace for Drones', desc: 'Airspace classes, charts, LAANC authorization, and reading a sectional before you fly.', accent: '#1A5532' },
+  { href: './Anatomy.dc.html', kicker: 'Drone Sensing', title: 'Drone Anatomy & Sensors', desc: "What's inside the DJI Air 2S — core components, sensing systems, and radio links.", accent: '#3E8EDE' },
+  { href: './BetterMaps.dc.html', kicker: 'Drone Mapping', title: 'Better Maps', desc: 'Mission planning fundamentals — overlap, resolution, shutter type, and GSD.', accent: '#1A5532' },
+  { href: './Checklists.dc.html', kicker: 'Operational Discipline', title: 'Checklists', desc: 'Why every flight starts with a list, not memory.', accent: '#B24E10' },
+  { href: './Crew.dc.html', kicker: 'Field Crew', title: 'Field Crew: Making It Work', desc: 'Roles and responsibilities that keep every drone flight safe.', accent: '#3E8EDE' },
+  { href: './GNSS.dc.html', kicker: 'Precision Positioning', title: 'GNSS: RTK & PPK', desc: 'Correction methods, ground control points, checkpoints, and NTRIP/LoRa connectivity.', accent: '#63493A' },
+  { href: './Limits.dc.html', kicker: 'FAA Part 107', title: 'Major Operating Limits', desc: 'Speed, altitude, visibility, and day/night operating limits.', accent: '#63493A' },
+  { href: './SFM01.dc.html', kicker: 'Part I', title: 'Photogrammetry & SfM', desc: 'A little history, definitions, and how Structure from Motion works.', accent: '#1A5532' },
+  { href: './SFM02.dc.html', kicker: 'Part II', title: 'Photogrammetry & SfM', desc: 'The geometry — keypoints, tie points, meshes, and orthomosaics.', accent: '#3E8EDE' },
+  { href: './Typology.dc.html', kicker: 'Drone Platforms', title: 'Drone Typology', desc: 'Multi-rotor, fixed-wing, and hybrid VTOL — a field guide.', accent: '#B24E10' },
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    return { decks: DECKS };
+  }
+}
+</script>
+</body>
+</html>
