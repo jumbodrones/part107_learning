@@ -14,19 +14,8 @@ A self-study course on U.S. civil drone regulation, built for Tufts Drone Progra
 
 Root-level `app.jsx`, `hub.jsx`, `lesson.jsx`, `exam.jsx`, `course-data.js`, `styles.css`, `icons.jsx`, `support.js`, `tweaks-panel.jsx`, and `Canvas.dc.html` are working copies used during development; the shipped builds live in `dist/`.
 
-## Publishing to GitHub Pages
 
-1. Push this repo to GitHub.
-2. In **Settings → Pages**, set the source to the branch/root (or a `docs/` folder if you prefer — copy `dist/Part 107 Safety Course (standalone).html` there as `index.html`).
-3. The standalone file has no external asset dependencies — it will render as-is once Pages serves it.
-
-## Uploading to Canvas
-
-1. In your Canvas course, go to **Settings → Apps** (or **Modules → + → External Tool**, depending on your Canvas setup) and choose to add a **SCORM package**.
-2. Upload `dist/Part-107-Safety-Course-SCORM-1.2.zip` unmodified — do not unzip it first.
-3. Add the resulting SCORM item to a module. Student progress and exam scores report to the gradebook automatically via `scorm-api.js`.
-
-See `USER_GUIDE.md` for instructor and student-facing usage notes.
+See `USER_GUIDE.md` for usage notes.
 
 ## Course structure
 
